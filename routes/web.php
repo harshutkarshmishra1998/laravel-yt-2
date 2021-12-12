@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/users', [DataController::class, 'index']);
+
+Route::view('/login', 'pages.data');
+// Route::get('/users', [DataController::class, 'testRequest']); //get method - the data goes through url
+// Route::post('/users', [DataController::class, 'testRequest']); //here we redirect when login is successful
+// Route::put('/users', [DataController::class, 'testRequest']);
+Route::delete('/users', [DataController::class, 'testRequest']);
