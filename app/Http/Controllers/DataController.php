@@ -17,8 +17,8 @@ class DataController extends Controller
     //     return view('pages.data', compact('data'));
     // }
 
-    function testRequest(Request $request)
-    {
-        return $request->input();
-    }
+    // function testRequest(Request $request)
+    // {
+    //     return $request->input();
+    // }
 }
